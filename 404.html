@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wolfite</title>
+    <title>404 | Wolfite</title>
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico?">
     <link rel="stylesheet" href="/s/css/backgrounds.css">
@@ -78,6 +78,7 @@
             top: -80px;
             opacity: 0%;
             transition: top 0.4s ease, opacity 1s ease;
+            user-select: none;
             /* transition-delay: 0.5s; */
             /* top: 0px; */
         }
@@ -93,16 +94,6 @@
             transition: 0.3s linear;
         }
 
-        .wos, .plugins {
-            opacity: 0%;
-            transition: 0.3s linear;
-        }
-
-        .wos:hover, .plugins:hover {
-            opacity: 100% !important;
-        }
-
-        
         @media (max-height:350px) {
             #bottom-bar {
                 opacity: 80%;
@@ -141,37 +132,114 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+
+.info h1, .info h3, .info h4, .info h5 {
+    opacity: 0%;
+    position: relative;
+    top: -30px;
+    transition: top 0.4s ease, opacity 1s ease;
+}
+/* .info h3 {
+    opacity: 0%;
+    position: relative;
+    top: -30px;
+    transition: top 0.4s ease, opacity 1s ease;
+} */
+
+#nav-options {
+    width: 300px;
+    height: 32px;
+    /* background-color: #404040; */
+    bottom: 10px;
+    left: calc(50% - 150px);
+    position: fixed;
+    text-align: center;
+    transition: bottom 0.4s ease, opacity 1s ease;
+    opacity: 0%;
+    user-select: none;
+}
+
+        #nav-options a {
+            display: block;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            margin: auto;
+            display: inline-block;
+        }
+
+        #nav-options svg {
+            width: 100%;
+            height: 100%;
+            color: #ffffff85;
+            transition: 0.3s linear;
+        }
+
+        #nav-options svg:hover {
+            color: #FFFFFF;
+        }
+
+
+@media (max-height:440px) {
+    #nav-options {
+        transition: bottom 1s ease;
+        bottom: auto !important;
+        position: relative;
+    }
+    .info {
+        transition: padding-top 0.4s ease;
+        padding-top: 18px !important;
+    }
+}
+
+br {
+    user-select: none;
+}
     </style>
 
     <script>
-         const queryString = window.location.search;
-        // console.log(queryString);
-        const parameters = new URLSearchParams(queryString);
+        //  const queryString = window.location.search;
+        // // console.log(queryString);
+        // const parameters = new URLSearchParams(queryString);
 
-        if (parameters.has("to") == true){
-            let to = parameters.get("to");
-            // console.log(to);
-            setTimeout(() => {
-                if (parameters.has("direct")==true){
-                    // console.log(parameters.get("direct"));
-                    if (parameters.get("direct")=="true"){
-                        redirect(to,true);
-                    }else{
-                        redirect(to);
-                    };
-                }else{
-                    redirect(to);
-                };
-            }, 1500);
-        };
+        // if (parameters.has("to") == true){
+        //     let to = parameters.get("to");
+        //     // console.log(to);
+        //     setTimeout(() => {
+        //         if (parameters.has("direct")==true){
+        //             // console.log(parameters.get("direct"));
+        //             if (parameters.get("direct")=="true"){
+        //                 redirect(to,true);
+        //             }else{
+        //                 redirect(to);
+        //             };
+        //         }else{
+        //             redirect(to);
+        //         };
+        //     }, 1500);
+        // };
+
+        var error_quotes_json = undefined
+        var b_eqjson = fetch("/error_quotes.json")
+            .then((response) => response.json())
+            .then((json) => error_quotes_json = json);
+        // console.log(error_quotes_json);
 
         document.addEventListener("DOMContentLoaded", function(){
             setTimeout(() => {  document.getElementById("social-icons").style.bottom = "20px"; document.getElementById("social-icons").style.opacity = "100%"; }, 100);
             setTimeout(() => {  document.getElementById("credit-link").style.bottom = "20px"; document.getElementById("credit-link").style.opacity = "100%"; }, 100);
             setTimeout(() => {  document.getElementById("top").style.top = "0px"; document.getElementById("top").style.opacity = "100%"; }, 100);
+            setTimeout(() => {  document.getElementById("nav-options").style.bottom = "60px"; document.getElementById("nav-options").style.opacity = "100%"; }, 1200);
 
-            setTimeout(() => {  document.getElementById("wos").style.opacity = "60%"; }, 1000);
-            setTimeout(() => {  document.getElementById("plugins").style.opacity = "60%"; }, 1500);
+            setTimeout(() => {  document.getElementById("error-code").style.top = "0px"; document.getElementById("error-code").style.opacity = "100%"; }, 600);
+            setTimeout(() => {  document.getElementById("error-sub-header").style.top = "0px"; document.getElementById("error-sub-header").style.opacity = "100%"; }, 1000);
+            setTimeout(() => {  document.getElementById("error-sub-sub-header").style.top = "0px"; document.getElementById("error-sub-sub-header").style.opacity = "100%"; }, 1400);
+            setTimeout(() => {  document.getElementById("error-sub-sub-sub-header").style.top = "0px"; document.getElementById("error-sub-sub-sub-header").style.opacity = "100%"; }, 120_000);
+
+            setTimeout(() => { document.getElementById("error-sub-sub-header").innerText = '"' + error_quotes_json["404"]["quotes"][Math.floor(Math.random() * error_quotes_json["404"]["quotes"].length)].text + '"';  }, 1400);
+            // console.log(error_quotes_json);
+            // document.getElementById("error-sub-sub-header").innerText = error_quotes_json["404"]["quotes"][0].text;
         });
 
         function tween_out(){
@@ -184,49 +252,9 @@
                 document.getElementById("social-icons").style.transition = "bottom 1s ease, opacity 0.3s ease";
                 document.getElementById("social-icons").style.bottom = "-20px";
                 document.getElementById("social-icons").style.opacity = "0%";
-
-                document.getElementById("plugins").style.cursor = "auto";
-                document.getElementById("plugins").style.setProperty("opacity", "0%", "important");
-                setTimeout(() => {document.getElementById("wos").style.display = "none"},300);
-
-                document.getElementById("wos").style.cursor = "auto";
-                document.getElementById("wos").style.setProperty("opacity", "0%", "important");
-                setTimeout(() => {document.getElementById("wos").style.display = "none"},300);
             }
 
-        var b_rjson = fetch("/redirects.json")
-            .then((response) => response.json())
-            .then((json) => redirects_json = json);
 
-        let redirect_db = false
-        function redirect(tag,skip){
-            if (redirect_db == false){
-                tween_out();
-                console.log(redirects_json["wos"].path);
-                if (tag in redirects_json){
-                    // console.log("exists");
-                    if (redirects_json[tag].skip_loading || skip==true){
-                        // carry out and skip loading
-                        // console.log("skip loading");
-                        window.location.replace(redirects_json[tag].path);
-                    }else{
-                        // console.log("cool loading animation");
-                        setTimeout(() => {document.getElementsByClassName("loader")[0].style.display = "block"; document.getElementsByClassName("loader")[0].style.opacity = "100%";}, 600);
-                        setTimeout(() => {
-                            window.location.replace(redirects_json[tag].path);
-                        }, 2500);
-                    }
-                }else{
-                    console.warn("does not exist");
-                    alert("The specified redirect ID is not valid.");
-                    window.location.replace("/");
-                };
-                redirect_db = true
-            } else{
-                console.log("db")
-                alert("Redirects exhausted")
-            };
-        }
     </script>
 </head>
 <body>
@@ -237,41 +265,28 @@
         <div style="text-align: center;" class="top" id="top">
             <a href="/"><img src="//wolfite.net/assets/wolfite-full.png" width="200px" alt="Wolfite Logo" id="js-top-logo-img" class="wolfite-logo" style="-webkit-user-drag: none;"></a>
         </div>
-
-        <div class="wos" id="wos"  onclick="redirect('wos');" onmouseover="" style="cursor: pointer; width: 80%; height: 200px; background-color: rgba(40, 40, 40, 0.5); border-radius: 1em; margin: auto;">
-            <div style="float:left; width: 200px; height: 100%; background-color: rgba(20,20,27); border-top-left-radius: 1em; border-bottom-left-radius: 1em; margin: 0;">
-                <div style="text-align: center; margin: 0;">
-                    <img style="height: 100%; width: 100%; object-fit: scale-down;" src="/WOS.png">
-                </div>
-            </div>
-            <div id="right" style="float:left; width: calc(100% - 200px); height: 100%; background-color: #000000; border-top-right-radius: 1em; border-bottom-right-radius: 1em;">
-                <!-- <h1 style="position:absolute; height: 100%; width: calc(100% - 20px); opacity: 90%; font-size: 16px; font-weight: 50; text-align: left; top:20px; right: -5px;"><b>Wolfite's Obby System</b></h1> -->
-                <img style="user-select: none; -webkit-user-drag: none; object-fit:cover; border-top-right-radius: 1em; border-bottom-right-radius: 1em; background-size:auto;" height="100%" width="100%" src="/wos-cover-art-bgonly.png">
-                <div style="float: right; bottom: 35px; right: 10px; height: 20px; width: 150px; z-index: 2; position: relative;">
-                    <h1 style="display: inline; position: relative; height: 100%; width: calc(100% - 20px); opacity: 50%; font-size: 16px; font-weight: 50; text-align: right;">3 000 000 VISITS</h1>
-                    <svg style="float: right; display:inline; position:relative; opacity:50%" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/> </svg>
-                </div>
-            </div>
+        <div id="nav-options">
+            <a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
+                <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
+              </svg></a>
+              &nbsp;
+              <a onclick="history.back()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+              </svg></a>
+              &nbsp;
+              <a href="//status.wolfite.net"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reception-4" viewBox="0 0 16 16">
+                <path d="M0 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-8zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-11z"/>
+              </svg></a>
         </div>
 
-        <br>
-
-        <div class="plugins" id="plugins"  onclick="redirect('plugins');" onmouseover="" style="cursor: pointer; width: 80%; height: 200px; background-color: rgba(40, 40, 40, 0.5); border-radius: 1em; margin: auto;">
-            <div style="float:left; width: 200px; height: 100%; background-color: rgba(20,20,27); border-top-left-radius: 1em; border-bottom-left-radius: 1em; margin: 0;">
-                <div style="text-align: center; margin: 0;">
-                    <img style="height: 80%; width: 80%; object-fit: scale-down; padding-top: 10%; padding-bottom: 10%;" src="/ui-editor-styles-fullscale.png">
-                </div>
-            </div>
-            <div id="right" style="float:left; width: calc(100% - 200px); height: 100%; background-color: #000000; border-top-right-radius: 1em; border-bottom-right-radius: 1em;">
-                <img style="user-select: none; -webkit-user-drag: none; object-fit:cover; border-top-right-radius: 1em; border-bottom-right-radius: 1em; background-size:auto;" height="100%" width="100%" src="/plugin-cover-art-v1.4-bgonly.png">
-                <div style="float: right; bottom: 35px; right: 10px; height: 20px; width: 150px; z-index: 2; position: relative;">
-                    <h1 style="display: inline; position: relative; height: 100%; width: calc(100% - 20px); opacity: 50%; font-size: 16px; font-weight: 50; text-align: right;">20 000 USES</h1>
-                    <svg style="float: right; display:inline; position:relative; opacity:50%" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/> </svg>
-                </div>
-            </div>
+        <div class="info" style="text-align: center; padding-top: 50px;">
+            <h1 id="error-code" style="font-size: 600%; margin: 0;"><b>404</b></h1>
+            <h3 id="error-sub-header" style="font-size: 200%; font-weight:300; letter-spacing:0.5px; color:rgb(220,220,220); margin: 0;">Page Not Found.</h3>
+            <h4 id="error-sub-sub-header" style="font-size: 100%; font-weight:300; letter-spacing:1px; color:rgb(180,180,180); margin: 0; padding-top: 10px;">...</h4>
+            <h5 id="error-sub-sub-sub-header" style="font-size: 50%; font-weight:300; letter-spacing:0px; color:rgb(180,180,180); margin: 0; padding-top: 10px;">this page really isn't that interesting</h5>
         </div>
-
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br>
 
         <div id="bottom-bar">
 
@@ -285,13 +300,13 @@
             <span>Background by <a href="/404" id="js-bg-cl-maintext">...</a></span>
         </div>
         <div class="social-icons" id="social-icons">
-            <a onclick="redirect('youtube')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+            <a href="/?to=youtube"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
                 <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
               </svg></a>
-            <a onclick="redirect('twitter')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+            <a href="/?to=twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
                 <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
               </svg></a>
-            <a onclick="redirect('discord')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+            <a href="/?to=discord"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
                 <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
               </svg></a>
         </div>

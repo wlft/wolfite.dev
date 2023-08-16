@@ -1,0 +1,21 @@
+// {
+            //     "text": "i wrote this quote in paris",
+            //     "author": "Wolfite",
+            //     "link": "/"
+            // }
+
+             {
+                "text": "RIP wolfite.net 2022-2023 that didn't last long...",
+                "author": "Wolfite",
+                "link": "/"
+            },
+                        {
+                "text": "Someone tell Google I'm not in Yorkshire anymore.",
+                "author": "Wolfite",
+                "link": "/"
+            },
+            {
+                "text": "Maybe the last text you sent contained a typo.",
+                "author": "Wolfite",
+                "link": "/"
+            },
