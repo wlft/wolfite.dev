@@ -8,6 +8,13 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico?">
     <link rel="stylesheet" href="/s/css/backgrounds.css">
 
+    <meta property="og:title" content=Wolfite>
+    <meta property="og:site_name" content=Wolfite.dev>
+    <meta property="og:url" content=wolfite.dev>
+    <meta property="og:description" content=General purpose index, displays multiple things and ever changing.>
+    <meta property="og:type" content=website>
+    <meta property="og:image" content=https://cdn.wolfite.net/branding/wolfite/wolfite.png>
+
     <script src="/s/js/global.js"></script>
 
     <style>
@@ -100,6 +107,10 @@
 
         .wos:hover, .plugins:hover {
             opacity: 100% !important;
+        }
+
+        .wos svg {
+            height: 100%; width: 100%; object-fit: scale-down;
         }
 
         
@@ -241,7 +252,8 @@
         <div class="wos" id="wos"  onclick="redirect('wos');" onmouseover="" style="cursor: pointer; width: 80%; height: 200px; background-color: rgba(40, 40, 40, 0.5); border-radius: 1em; margin: auto;">
             <div style="float:left; width: 200px; height: 100%; background-color: rgba(20,20,27); border-top-left-radius: 1em; border-bottom-left-radius: 1em; margin: 0;">
                 <div style="text-align: center; margin: 0;">
-                    <img style="height: 100%; width: 100%; object-fit: scale-down;" src="/WOS.png">
+                    <img style="height: 100%; width: 100%; object-fit: scale-down;" src="//cdn.wolfite.net/branding/wos/WOS.svg" onerror="this.src='//cdn.wolfite.net/branding/wos/WOS.png'">
+
                 </div>
             </div>
             <div id="right" style="float:left; width: calc(100% - 200px); height: 100%; background-color: #000000; border-top-right-radius: 1em; border-bottom-right-radius: 1em;">
