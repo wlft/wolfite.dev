@@ -211,6 +211,7 @@
 
         let redirect_db = false
         function redirect(tag,skip){
+            tag = tag.toLowerCase()
             if (redirect_db == false){
                 tween_out();
                 console.log(redirects_json["wos"].path);

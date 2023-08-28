@@ -29,6 +29,10 @@
         "path": "https://www.roblox.com/games/10384955640/SDCO",
         "skip_loading": false
     },
+    "tco": {
+        "path": "/404",
+        "skip_loading": false
+    },
     "obyan": {
         "path": "https://www.roblox.com/games/13971383533/100m-obby-but-youre-a-noob",
         "skip_loading": false
