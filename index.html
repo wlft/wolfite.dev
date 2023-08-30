@@ -16,8 +16,7 @@
     <meta property="og:image" content=https://cdn.wolfite.net/branding/wolfite/wlft_dev_og_img.png>
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:thumbnail" content=https://cdn.wolfite.net/branding/wolfite/wlft_dev_og_img.png>
-    <meta name="twitter:image1" content="https://cdn.wolfite.net/branding/wolfite/wlft_dev_og_img.png">
+    <meta name="twitter:image1" content="https://cdn.wolfite.net/branding/wolfite/wlft_dev_og_img.png"> 
     <!-- <meta property="og:image" content=https://cdn.wolfite.net/branding/wolfite/wolfite.png>
     <meta property="og:image:width" content="300" />
     <meta property="og:image:height" content="300" /> -->
@@ -173,13 +172,15 @@
             setTimeout(() => {
                 if (parameters.has("direct")==true){
                     // console.log(parameters.get("direct"));
+                    var history = parameters.get("h");
+
                     if (parameters.get("direct")=="true"){
-                        redirect(to,true);
+                        redirect(to,true,history);
                     }else{
-                        redirect(to);
+                        redirect(to,false,history);
                     };
                 }else{
-                    redirect(to);
+                    redirect(to,false,history);
                 };
             }, 1500);
         };
@@ -218,8 +219,9 @@
             .then((json) => redirects_json = json);
 
         let redirect_db = false
-        function redirect(tag,skip){
+        function redirect(tag,skip,history){
             tag = tag.toLowerCase()
+            if (history == null){history = true};
             if (redirect_db == false){
                 tween_out();
                 console.log(redirects_json["wos"].path);
@@ -228,12 +230,20 @@
                     if (redirects_json[tag].skip_loading || skip==true){
                         // carry out and skip loading
                         // console.log("skip loading");
-                        window.location.replace(redirects_json[tag].path);
+                        if (history == true || history == null){
+                                window.location.href = redirects_json[tag].path;
+                            }else{
+                                window.location.replace(redirects_json[tag].path);
+                            };
                     }else{
                         // console.log("cool loading animation");
                         setTimeout(() => {document.getElementsByClassName("loader")[0].style.display = "block"; document.getElementsByClassName("loader")[0].style.opacity = "100%";}, 600);
                         setTimeout(() => {
-                            window.location.replace(redirects_json[tag].path);
+                            if (history == true || history == null){
+                                window.location.href = redirects_json[tag].path;
+                            }else{
+                                window.location.replace(redirects_json[tag].path);
+                            };
                         }, 2500);
                     }
                 }else{
