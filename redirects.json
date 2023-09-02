@@ -15,6 +15,10 @@
         "path": "/wos/premium",
         "skip_loading": false
     },
+    "wos/premium/get": {
+        "path": "https://www.roblox.com/library/12903429193/Wolfites-Obby-System-Premium",
+        "skip_loading": false
+    },
 
     "plugins": {
         "path": "https://create.roblox.com/marketplace/plugins?creatorId=655331725&includeOnlyVerifiedCreators=true&keyword=&pageNumber=1",
