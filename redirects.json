@@ -15,8 +15,24 @@
         "path": "/wos/premium",
         "skip_loading": false
     },
+    "wos/premium/features": {
+        "path": "/wos/premium#features",
+        "skip_loading": false
+    },
     "wos/premium/get": {
         "path": "https://www.roblox.com/library/12903429193/Wolfites-Obby-System-Premium",
+        "skip_loading": false
+    },
+    "wos/0.8.5": {
+        "path": "https://dcos.fandom.com/wiki/Wolfite%27s_Obby_System/0.8.5",
+        "skip_loading": false
+    },
+    "wos/docs/menu": {
+        "path": "/wos/docs/menu",
+        "skip_loading": false
+    },
+    "wos/faq": {
+        "path": "https://wolfite.net/wos/faq",
         "skip_loading": false
     },
 

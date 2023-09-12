@@ -3,25 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Wolfite's Obby System</title>
+        <title>Menu | WOS DOCS</title>
 
         <link rel="icon" type="image/x-icon" href="https://cdn.wolfite.net/branding/wou/WOU.png">
         <link rel="stylesheet" href="/s/css/backgrounds.css">
 
-        <meta property="og:title" content="Wolfite's Obby System">
+        <meta property="og:title" content="Menu | WOS DOCS">
         <meta property="og:site_name" content=Wolfite>
         <meta property="og:url" content=wolfite.dev>
         <meta property="og:description" content="Wolfite's Obby System is the #1 obby system for Roblox. Many features, many games, and even more potential.">
         <meta property="og:type" content=website>
-        <meta property="og:image" content=https://cdn.wolfite.net/branding/wos/WOS.png>
-        <meta property="og:image:width" content="1024" />
-        <meta property="og:image:height" content="1022" />
-        <meta name="twitter:card" content="summary">
+        <meta property="og:image" content=https://wolfite.dev/wos-cover-art-v1.png>
+        <meta property="og:image:width" content="1920" />
+        <meta property="og:image:height" content="1080" />
+        <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@Wolfite_">
         <meta name="twitter:creator" content="@Wolfite_">
-        <meta name="twitter:title" content="Wolfite's Obby System">
+        <meta name="twitter:title" content="Menu | WOS DOCS">
         <meta name="twitter:description" content="Wolfite's Obby System is the #1 obby system for Roblox. Many features, many games, and even more potential.">
-        <meta name="twitter:image" content="https://cdn.wolfite.net/branding/wos/WOS.png">
+        <meta name="twitter:image" content="https://wolfite.dev/wos-cover-art-v1.png">
     <!-- <meta property="og:image" content=https://cdn.wolfite.net/branding/wolfite/wolfite.png>
     <meta property="og:image:width" content="300" />
     <meta property="og:image:height" content="300" /> -->
@@ -344,7 +344,7 @@
         <div class="content">
             <div class="loader"></div>
             <div style="text-align: left;" class="top" id="top">
-                <a href="./"><img src="https://cdn.wolfite.net/branding/wos/WOS.svg" width="60px" alt="WOS Logo" id="js-top-logo-img" class="wolfite-logo" style="-webkit-user-drag: none;"></a>
+                <a href="../"><img src="https://cdn.wolfite.net/branding/wos/WOS.svg" width="60px" alt="Wolfite Logo" id="js-top-logo-img" class="wolfite-logo" style="-webkit-user-drag: none;"></a>
                 <a onclick='window.location.href = "/?to=wos"' class="non-img">About</a>
                 <a onclick='window.location.href = "/?to=wos/0.8.5"' class="non-img">WOS 0.8.5</a>
                 <a onclick='window.location.href = "/?to=wos/features"' class="non-img">Features</a>
@@ -367,116 +367,77 @@
 
             <div class="info" style="text-align: center; padding-top: 50px;">
                 <h1 id="main-header" style="font-size: 600%; margin: 0;"><b><img src="//cdn.wolfite.net/branding/wou/WOU.svg" style="-webkit-user-drag: none;" height="75px">&nbsp;WOS DOCS</b></h1>
-                <h3 id="main-sub-header" style="font-size: 200%; font-weight:300; letter-spacing:0.5px; color:rgb(220,220,220); margin: 0;">Features</h3>
+                <h3 id="main-sub-header" style="font-size: 200%; font-weight:300; letter-spacing:0.5px; color:rgb(220,220,220); margin: 0;">Documentation Menu</h3>
                 <div id="buttons" style="padding-top: 10px; display: inline-block;">
                     <button id="nav-free" onclick='history.back();' style="cursor: pointer; background-color: #FFFFFF; border: none; color: #000000; font-size: 14px; border-radius: 0.5em; padding: 10px; font-weight: bold;">Back</button>
                     &nbsp;
-                    <button id="nav-features" onclick='window.location.href = "/?to=wos/docs/menu"' style="cursor: pointer; background-color: #29292955; border: none; color: #FFFFFF; font-size: 14px; border-radius: 0.5em; padding: 10px; font-weight: bold;">Menu</button>
+                    <button id="nav-features" onclick='window.location.href = "/?to=wos&direct=true&h=false"' style="cursor: pointer; background-color: #29292955; border: none; color: #FFFFFF; font-size: 14px; border-radius: 0.5em; padding: 10px; font-weight: bold;">Main Page</button>
                     &nbsp;
                     <button id="nav-premium" onclick='window.location.href = "/?to=wos/premium"' style="cursor: pointer; background-color: #605811; border: none; color: #FFFFFF; font-size: 14px; border-radius: 0.5em; padding: 10px; font-weight: bold;">Premium</button>
                 </div>
             </div>
 
-            <div class="features" style="text-align: center; padding-top: 50px;">
-                <h1>Features</h1>
-                (v0.8.5)
+            <div class="basic" style="text-align: center; padding-top: 50px;">
+                <h1>Basic Features</h1>
+                <p style="color: #b8b8b8;">These features are available in all tiers. However, may be better in Premium.</p>
                 <br>
                 <br>
-                <div onclick='window.location.href = "./docs/stage-selector"' style="cursor:pointer; border-radius: 1em; width: 80%; background-color: #0000009E; padding:5px; padding-left: 10px; padding-right: 10px; margin: auto;" id="feature">
-                    <h1 style="text-align: left; display: flex;align-items: left; justify-content: left; padding-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" style="padding-top: 1px;" width="34px" height="34px" fill="currentColor" class="bi bi-flag-fill" viewBox="0 0 16 16">
-                        <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001"/>
+                <div style="border-radius: 1em; width: 80%; background-color: #0000009E; padding:5px; padding-left: 10px; padding-right: 10px; margin: auto;" id="feature">
+                    <h1 style="text-align: left; display: flex;align-items: left; justify-content: left; padding-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" style="padding-top: 1px;" width="34px" height="34px" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                       </svg>
-                    &thinsp; Stage Selector</h1>
-                        <p style="text-align: left; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">The WOS stage selector is a convenient and user-friendly feature that allows users to quickly and easily navigate through different stages. With the use of simple arrow buttons, users can scroll through the stages to find the one they need.</p>
+                    </h1>
+                        <p style="text-align: center; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">
+                            A-Z
+                        </p>
+                        <a href="./badges" style="color:#008cff;text-decoration: none;"><b>Badges</b></a>
+                        <br><br>
+                        <a href="./checkpoints" style="color:#008cff;text-decoration: none;"><b>Checkpoints</b></a>
+                        <br><br>
+                        <a href="./monetization" style="color:#008cff;text-decoration: none;"><b>Monetization</b></a>
+                        <br><br>
+                        <a href="./progress-bar" style="color:#008cff;text-decoration: none;"><b>Progress Bar</b></a>
+                        <br><br>
+                        <a href="./settings" style="color:#008cff;text-decoration: none;"><b>Settings</b></a>
+                        <br><br>
+                        <a href="./shiftlock" style="color:#008cff;text-decoration: none;"><b>Shiftlock</b></a>
+                        <br><br>
+                        <a href="./stage-indicator" style="color:#008cff;text-decoration: none;"><b>Stage Indicator</b></a>
+                        <br><br>
+                        <a href="./stage-selector" style="color:#008cff;text-decoration: none;"><b>Stage Selector</b></a>
+                        <br><br>
+                        <a href="./system-messages" style="color:#008cff;text-decoration: none;"><b>System Messages</b></a>
+                        <br><br>
                 </div>
+               <br>
+            </div>
+
+            <div class="premium" style="text-align: center; padding-top: 50px;">
+                <h1>Premium Features</h1>
+                <p style="color: #b8b8b8;">These features are available in only WOS Premium.</p>
                 <br>
-                <div onclick='window.location.href = "./docs/checkpoints"' style="cursor:pointer; border-radius: 1em; width: 80%; background-color: #0000009E; padding:5px; padding-left: 10px; padding-right: 10px; margin: auto;" id="feature">
-                    <h1 style="text-align: left; display: flex;align-items: left; justify-content: left; padding-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" style="padding-top: 1px;" width="34px" height="34px" fill="currentColor" class="bi bi-arrows-move" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10zM.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708l-2-2zM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8z"/>
+                <br>
+                <div style="border-radius: 1em; width: 80%; background-color: #0000009E; padding:5px; padding-left: 10px; padding-right: 10px; margin: auto;" id="feature">
+                    <h1 style="text-align: left; display: flex;align-items: left; justify-content: left; padding-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" style="padding-top: 1px;" width="34px" height="34px" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                       </svg>
-                    &thinsp; Animated Checkpoints</h1>
-                        <p style="text-align: left; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">WOS's animated checkpoints feature is a fun and creative tool that allows users to customize the appearance of checkpoints. With a variety of animation styles to choose from, including classic, spin, world, and color-only, users can tailor their checkpoints to match the look and feel of their game.</p>
+                    </h1>
+                        <p style="text-align: center; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">
+                            A-Z
+                        </p>
+                        <a href="../premium/docs/nuke" style="color:#008cff;text-decoration: none;"><b>Nuke</b></a>
+                        <br><br>
+                        <a href="../premium/docs/server-skip" style="color:#008cff;text-decoration: none;"><b>Server Skip</b></a>
+                        <br><br>
+                        <a href="../premium/docs/skip-10" style="color:#008cff;text-decoration: none;"><b>Skip 10 Stages</b></a>
+                        <br><br>
                 </div>
-                <br>
-                <div onclick='window.location.href = "./docs/progress-bar"' style="cursor:pointer; border-radius: 1em; width: 80%; background-color: #0000009E; padding:5px; padding-left: 10px; padding-right: 10px; margin: auto;" id="feature">
-                    <h1 style="text-align: left; display: flex;align-items: left; justify-content: left; padding-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" style="padding-top: 1px;" width="34px" height="34px" fill="currentColor" class="bi bi-trophy-fill" viewBox="0 0 16 16">
-                        <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935z"/>
-                      </svg>
-                    &thinsp; Progress Bar</h1>
-                        <p style="text-align: left; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">The progress bar is a simple feature that lets the user knows how close they are to completing an obby. If a user has completed 74 stages out of 100, the progress bar will be 74% to the end of the container.</p>
-                </div>
-                <br>
-                <div onclick='window.location.href = "./docs/stage-indicator"' style="cursor:pointer; border-radius: 1em; width: 80%; background-color: #0000009E; padding:5px; padding-left: 10px; padding-right: 10px; margin: auto;" id="feature">
-                    <h1 style="text-align: left; display: flex;align-items: left; justify-content: left; padding-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" style="padding-top: 1px;" width="34px" height="34px" fill="currentColor" class="bi bi-arrow-down-square-fill" viewBox="0 0 16 16">
-                        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0z"/>
-                      </svg>
-                    &thinsp; Stage Indicator</h1>
-                        <p style="text-align: left; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">The stage indicator is a small but common feature in obbies. It simple creates an arrow above the next checkpoint that a player can see through walls so that they know where to go.</p>
-                </div>
-                <br>
-                <div onclick='window.location.href = "./docs/monetization"' style="cursor:pointer; border-radius: 1em; width: 80%; background-color: #0000009E; padding:5px; padding-left: 10px; padding-right: 10px; margin: auto;" id="feature">
-                    <h1 style="text-align: left; display: flex;align-items: left; justify-content: left; padding-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" style="padding-top: 1px;" width="34px" height="34px" fill="currentColor" class="bi bi-currency-exchange" viewBox="0 0 16 16">
-                        <path d="M0 5a5.002 5.002 0 0 0 4.027 4.905 6.46 6.46 0 0 1 .544-2.073C3.695 7.536 3.132 6.864 3 5.91h-.5v-.426h.466V5.05c0-.046 0-.093.004-.135H2.5v-.427h.511C3.236 3.24 4.213 2.5 5.681 2.5c.316 0 .59.031.819.085v.733a3.46 3.46 0 0 0-.815-.082c-.919 0-1.538.466-1.734 1.252h1.917v.427h-1.98c-.003.046-.003.097-.003.147v.422h1.983v.427H3.93c.118.602.468 1.03 1.005 1.229a6.5 6.5 0 0 1 4.97-3.113A5.002 5.002 0 0 0 0 5zm16 5.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0zm-7.75 1.322c.069.835.746 1.485 1.964 1.562V14h.54v-.62c1.259-.086 1.996-.74 1.996-1.69 0-.865-.563-1.31-1.57-1.54l-.426-.1V8.374c.54.06.884.347.966.745h.948c-.07-.804-.779-1.433-1.914-1.502V7h-.54v.629c-1.076.103-1.808.732-1.808 1.622 0 .787.544 1.288 1.45 1.493l.358.085v1.78c-.554-.08-.92-.376-1.003-.787H8.25zm1.96-1.895c-.532-.12-.82-.364-.82-.732 0-.41.311-.719.824-.809v1.54h-.005zm.622 1.044c.645.145.943.38.943.796 0 .474-.37.8-1.02.86v-1.674l.077.018z"/>
-                      </svg>
-                    &thinsp; Monetization</h1>
-                        <p style="text-align: left; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">WOS provides easy and great monetization methods, click below for more information.</p>
-                </div>
-                <br>
-                <div onclick='window.location.href = "./docs/badges"' style="cursor:pointer; border-radius: 1em; width: 80%; background-color: #0000009E; padding:5px; padding-left: 10px; padding-right: 10px; margin: auto;" id="feature">
-                    <h1 style="text-align: left; display: flex;align-items: left; justify-content: left; padding-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" style="padding-top: 1px;" width="34px" height="34px" fill="currentColor" class="bi bi-award-fill" viewBox="0 0 16 16">
-                        <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/>
-                        <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
-                      </svg>
-                    &thinsp; Badges</h1>
-                        <p style="text-align: left; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">Badges were always so annoying, giving badges to someone if they just touched a checkpoint. Even if they weren't alive, or were exploiting. Those days are far gone. Now, all you have to do is type the stage number, and then the BadgeID. It's really that simple, it takes longer to make the badge.</p>
-                </div>
-                <br>
-                <div onclick='window.location.href = "./docs/shiftlcok"' style="cursor:pointer; border-radius: 1em; width: 80%; background-color: #0000009E; padding:5px; padding-left: 10px; padding-right: 10px; margin: auto;" id="feature">
-                    <h1 style="text-align: left; display: flex;align-items: left; justify-content: left; padding-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" style="padding-top: 1px;" width="34px" height="34px" fill="currentColor" class="bi bi-symmetry-vertical" viewBox="0 0 16 16">
-                        <path d="M7 2.5a.5.5 0 0 0-.939-.24l-6 11A.5.5 0 0 0 .5 14h6a.5.5 0 0 0 .5-.5v-11zm2.376-.484a.5.5 0 0 1 .563.245l6 11A.5.5 0 0 1 15.5 14h-6a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .376-.484zM10 4.46V13h4.658L10 4.46z"/>
-                      </svg>
-                    &thinsp; Draggable Mobile Shiftlock</h1>
-                        <p style="text-align: left; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">Mobile shiftlock was a blessing for all mobile players. Now, it's gotten even better. Mobile players have the luxury of dragging their shiftlock to any position they want.</p>
-                </div>
-                <br>
-                <div onclick='window.location.href = "./docs/chat-tags"' style="cursor:pointer; border-radius: 1em; width: 80%; background-color: #0000009E; padding:5px; padding-left: 10px; padding-right: 10px; margin: auto;" id="feature">
-                    <h1 style="text-align: left; display: flex;align-items: left; justify-content: left; padding-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" style="padding-top: 1px;" width="34px" height="34px" fill="currentColor" class="bi bi-chat-left-dots-fill" viewBox="0 0 16 16">
-                        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                      </svg>
-                    &thinsp; Chat Tags</h1>
-                        <p style="text-align: left; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">You had to sift through broken models, bad colors, and find someone's UserID every time you just wanted a simple chat tag. Soon, that won't be necessary at all. Since WOS 0.8.3, you are be able to easily assign chat tags and colors via someone's UserID or their username.</p>
-                </div>
-                <br>
-                <div onclick='window.location.href = "./docs/system-messages"' style="cursor:pointer; border-radius: 1em; width: 80%; background-color: #0000009E; padding:5px; padding-left: 10px; padding-right: 10px; margin: auto;" id="feature">
-                    <h1 style="text-align: left; display: flex;align-items: left; justify-content: left; padding-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" style="padding-top: 1px;" width="34px" height="34px" fill="currentColor" class="bi bi-chat-left-dots-fill" viewBox="0 0 16 16">
-                        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                      </svg>
-                    &thinsp; System Messages</h1>
-                        <p style="text-align: left; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">Add some extra messages to the chat, promote whatever you want.</p>
-                </div>
-                <br>
-                <div onclick='window.location.href = "./docs/system-messages"' style="cursor:pointer; border-radius: 1em; width: 80%; background-color: #0000009E; padding:5px; padding-left: 10px; padding-right: 10px; margin: auto;" id="feature">
-                    <h1 style="text-align: left; display: flex;align-items: left; justify-content: left; padding-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" style="padding-top: 1px;" width="34px" height="34px" fill="currentColor" class="bi bi-chat-left-dots-fill" viewBox="0 0 16 16">
-                        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                      </svg>
-                    &thinsp; Join And Leave</h1>
-                        <p style="text-align: left; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">Let your players know when new people join the server, and when others leave. You can even set up exactly what it says.</p>
-                </div>
-                <br>
-                <div onclick='window.location.href = "./docs/settings"' style="cursor:pointer; border-radius: 1em; width: 80%; background-color: #0000009E; padding:5px; padding-left: 10px; padding-right: 10px; margin: auto;" id="feature">
-                    <h1 style="text-align: left; display: flex;align-items: left; justify-content: left; padding-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" style="padding-top: 1px;" width="34px" height="34px" fill="currentColor" class="bi bi-gear-wide-connected" viewBox="0 0 16 16">
-                        <path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434l.071-.286zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5zm0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78h4.723zM5.048 3.967c-.03.021-.058.043-.087.065l.087-.065zm-.431.355A4.984 4.984 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8 4.617 4.322zm.344 7.646.087.065-.087-.065z"/>
-                      </svg>
-                    &thinsp; Settings</h1>
-                        <p style="text-align: left; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">Players can toggle shadows, blur, and hide the WOS UI. More settings are available for WOS Premium.</p>
-                </div>
-                <br>
-                <p>More features are available with <a href="/404.html" style="text-decoration: none; color:rgb(0, 132, 255);"><b>WOS Premium</b></a>.</p>
+               <br>
             </div>
 
             <div class="support" style="text-align: center; padding-top: 50px;">
                 <h1>Support</h1>
-                <p><a href="/404.html" style="text-decoration: none; color:rgb(0, 132, 255);"><b>FAQ</b></a></p>
+                <p><a href="/?to=wos/faq" style="text-decoration: none; color:rgb(0, 132, 255);"><b>FAQ</b></a></p>
                 <div style="display: inline-block;">
                     <a href="/?to=twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
                         <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
