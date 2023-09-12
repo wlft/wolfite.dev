@@ -1,3 +1,7 @@
 User-agent: *
 Disallow: /s
 Disallow: /*?*
+Sitemap: /sitemap.xml
+
+
+Disallow: /404
