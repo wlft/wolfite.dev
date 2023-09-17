@@ -288,6 +288,23 @@
         }
     }
     
+    #wos-premium-hyper-link {
+        color: #887D19;
+        transition: all 0.3s ease;
+    }
+
+    #wos-premium-hyper-link-svg {
+        fill: #887D19;
+        transition: all 0.3s ease;
+    }
+
+    #wos-premium-hyper-link:hover {
+        color:#605811;
+        #wos-premium-hyper-link-svg {
+            fill:#605811;
+        }
+    }
+
     br {
         user-select: none;
     }
@@ -344,7 +361,7 @@
         <div class="content">
             <div class="loader"></div>
             <div style="text-align: left;" class="top" id="top">
-                <a href="../"><img src="https://cdn.wolfite.net/branding/wos/WOS.svg" width="60px" alt="Wolfite Logo" id="js-top-logo-img" class="wolfite-logo" style="-webkit-user-drag: none;"></a>
+                <a href="../"><img src="https://cdn.wolfite.net/branding/wos/WOS.svg" width="60px" alt="WOS Logo" id="js-top-logo-img" class="wolfite-logo" style="-webkit-user-drag: none;"></a>
                 <a onclick='window.location.href = "/?to=wos"' class="non-img">About</a>
                 <a onclick='window.location.href = "/?to=wos/0.8.5"' class="non-img">WOS 0.8.5</a>
                 <a onclick='window.location.href = "/?to=wos/features"' class="non-img">Features</a>
@@ -392,13 +409,14 @@
                         </p>
                 </div>
                <br>
-               <p>More features are available with <a onclick='window.location.href = "/?to=wos/premium&direct=true&h=false"' style="text-decoration: none; cursor: pointer; color:rgb(0, 132, 255);"><b>WOS Premium</b></a>.</p>
+               <p style="user-select:none;">More features are available with <a id="wos-premium-hyper-link" onclick='window.location.href = "/?to=wos/premium&direct=true&h=false"' style="text-decoration: none; cursor: pointer;"><svg id="wos-premium-hyper-link-svg" width="12" height="12" style="margin-right: 4px;" viewBox="0 0 512 512" fill="#887D19" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="80" width="60" height="204" transform="rotate(-90 20 80)"/><rect x="432.074" y="20.0735" width="60" height="204"/><rect x="166" y="346" width="180" height="180" transform="rotate(-90 166 346)"/><rect x="492" y="432.147" width="60" height="204" transform="rotate(90 492 432.147)"/><rect x="79.9265" y="492.074" width="60" height="204" transform="rotate(-180 79.9265 492.074)"/>
+               </svg><b>WOS Premium</b></a></p>
             </div>
 
             <div class="support" style="text-align: center; padding-top: 50px;">
                 <h1>Support</h1>
                 <p><a href="/?to=wos/faq" style="text-decoration: none; color:rgb(0, 132, 255);"><b>FAQ</b></a></p>
-                <div style="display: inline-block;">
+                <div style="display: inline-block; user-select: none; background-image: url(wos-cover-art-bgonly.png);">
                     <a href="/?to=twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
                         <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
                       </svg></a>

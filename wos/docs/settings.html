@@ -287,6 +287,86 @@
             padding-top: 50px !important;
         }
     }
+
+    .rotated-bullet {
+        height: 7px;
+        width: 7px;
+        top: -2px;
+        background-color: #FFFFFF;
+        display: inline-block;
+        position: relative;
+        margin-right: 8px;
+        transform: rotate(15deg);
+        transition: all 0.3s ease;
+    }
+
+    .list-item {
+        cursor: pointer;
+    }
+
+    #list-contents {
+            opacity: 100%;
+            transition: all 0.3s ease;
+            display: inline-block;
+    }
+
+    .rotated-bullet:hover {
+        transform: rotate(45deg);
+        opacity: 50%;
+    }
+
+    .list-item:hover {
+        .rotated-bullet {
+            transform: rotate(45deg);
+            opacity: 50%;
+        }
+        #list-contents {
+            opacity: 50%;
+        }
+    }
+
+    #list-sub-content {
+        display: inline-block;
+        color: #979797;
+    }
+
+    /* #list-contents:hover {
+        .rotated-bullet {
+            transform: rotate(45deg);
+            opacity: 50%;
+        }
+        #list-contents {
+            opacity: 50%;
+        }
+    } */
+
+    #wos-premium-hyper-link {
+        color: #887D19;
+        transition: all 0.3s ease;
+    }
+
+    #wos-premium-hyper-link-svg {
+        fill: #887D19;
+        transition: all 0.3s ease;
+    }
+
+    #wos-premium-hyper-link:hover {
+        color:#605811;
+        #wos-premium-hyper-link-svg {
+            fill:#605811;
+        }
+    }
+
+    #cog-rotating {
+        transition: all 10s linear;
+    }
+
+    .about:hover {
+        #cog-rotating {
+            transform: rotate(360deg);
+        }
+    }
+
     
     br {
         user-select: none;
@@ -342,9 +422,9 @@
         <div class="overlay"></div>
         <div class="background"></div>
         <div class="content">
-            <div class="loader"></div>
+            <!-- <div class="loader"></div> -->
             <div style="text-align: left;" class="top" id="top">
-                <a href="../"><img src="https://cdn.wolfite.net/branding/wos/WOS.svg" width="60px" alt="Wolfite Logo" id="js-top-logo-img" class="wolfite-logo" style="-webkit-user-drag: none;"></a>
+                <a href="../"><img src="https://cdn.wolfite.net/branding/wos/WOS.svg" width="60px" alt="WOS Logo" id="js-top-logo-img" class="wolfite-logo" style="-webkit-user-drag: none;"></a>
                 <a onclick='window.location.href = "/?to=wos"' class="non-img">About</a>
                 <a onclick='window.location.href = "/?to=wos/0.8.5"' class="non-img">WOS 0.8.5</a>
                 <a onclick='window.location.href = "/?to=wos/features"' class="non-img">Features</a>
@@ -367,7 +447,9 @@
 
             <div class="info" style="text-align: center; padding-top: 50px;">
                 <h1 id="main-header" style="font-size: 600%; margin: 0;"><b><img src="//cdn.wolfite.net/branding/wou/WOU.svg" style="-webkit-user-drag: none;" height="75px">&nbsp;WOS DOCS</b></h1>
-                <h3 id="main-sub-header" style="font-size: 200%; font-weight:300; letter-spacing:0.5px; color:rgb(220,220,220); margin: 0;">Settings | Basic Features</h3>
+                <h3 id="main-sub-header" style="font-size: 200%; font-weight:300; letter-spacing:0.5px; color:rgb(220,220,220); margin: 0;"><svg xmlns="http://www.w3.org/2000/svg" style="padding-top: 2px; margin-right: 4px; transform: rotate(15deg);" width="26px" height="26px" fill="currentColor" class="bi bi-gear-wide-connected" viewBox="0 0 16 16">
+                        <path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434l.071-.286zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5zm0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78h4.723zM5.048 3.967c-.03.021-.058.043-.087.065l.087-.065zm-.431.355A4.984 4.984 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8 4.617 4.322zm.344 7.646.087.065-.087-.065z"/>
+                      </svg>Settings | Basic Features</h3>
                 <div id="buttons" style="padding-top: 10px; display: inline-block;">
                     <button id="nav-free" onclick='history.back();' style="cursor: pointer; background-color: #FFFFFF; border: none; color: #000000; font-size: 14px; border-radius: 0.5em; padding: 10px; font-weight: bold;">Back</button>
                     &nbsp;
@@ -383,37 +465,34 @@
                 <br>
                 <br>
                 <div style="border-radius: 1em; width: 80%; background-color: #0000009E; padding:5px; padding-left: 10px; padding-right: 10px; margin: auto;" id="feature">
-                    <h1 style="text-align: left; display: flex;align-items: left; justify-content: left; padding-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" style="padding-top: 1px;" width="34px" height="34px" fill="currentColor" class="bi bi-gear-wide-connected" viewBox="0 0 16 16">
+                    <h1 style="text-align: left; display: flex;align-items: left; justify-content: left; padding-left: 10px;"><svg id="cog-rotating" xmlns="http://www.w3.org/2000/svg" style="padding-top: 1px;" width="34px" height="34px" fill="currentColor" class="bi bi-gear-wide-connected" viewBox="0 0 16 16">
                         <path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434l.071-.286zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5zm0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78h4.723zM5.048 3.967c-.03.021-.058.043-.087.065l.087-.065zm-.431.355A4.984 4.984 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8 4.617 4.322zm.344 7.646.087.065-.087-.065z"/>
                       </svg>
                     </h1>
                         <p style="text-align: center; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">
                             Settings available in different tiers of WOS...
                         </p>
-                        <h2>Basic Settings</h2>
-                        <p style="text-align: center; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">
-                            &bullet; Shadows (toggle)
-                            <br>
-                            &bullet; Blur (toggle)
-                            <br>
-                            &bullet; Hide UI (toggle)
+                        <h2 id="basic-settings">Basic Settings</h2>
+                        <p style="text-align: center; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px; display: inline;">
+                            <div onclick='window.location.href = "#basic-settings"' class="list-item"><div class="rotated-bullet"></div><div id="list-contents">Shadows <div id="list-sub-content">(ON/OFF)</div></div></div>
+                            <div onclick='window.location.href = "#basic-settings"' class="list-item"><div class="rotated-bullet"></div><div id="list-contents">Blur <div id="list-sub-content">(ON/OFF)</div></div></div>
+                            <div onclick='window.location.href = "#basic-settings"' class="list-item"><div class="rotated-bullet"></div><div id="list-contents">Hide UI <div id="list-sub-content">(ON/OFF)</div></div></div>
                             <br>
                         </p>
                         <br>
-                        <h2>Premium Settings</h2>
-                        <p style="text-align: center; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">
+                        <h2 id="premium-settings">Premium Settings</h2>
+                        <p style="text-align: center; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px; display: inline;">
                             on top of basic...
                             <br><br>
-                            &bullet; Hide Players (toggle)
-                            <br>
-                            &bullet; Easy Mode (toggle, if the user has the gamepass)
-                            <br>
-                            &bullet; Time (multi options: Day, Night, and Local time)
-                            <br>
+                            <div onclick='window.location.href = "#premium-settings"' class="list-item"><div class="rotated-bullet"></div><div id="list-contents">Hide Players <div id="list-sub-content">(ON/OFF)</div></div></div>
+                            <div onclick='window.location.href = "#premium-settings"' class="list-item"><div class="rotated-bullet"></div><div id="list-contents">Easy Mode <div id="list-sub-content">(ON/OFF, if the user has the gamepass)</div></div></div>
+                            <div onclick='window.location.href = "#premium-settings"' class="list-item"><div class="rotated-bullet"></div><div id="list-contents">Time <div id="list-sub-content">(Day / Night / Automatic)</div></div></div>
                         </p>
+                            
                 </div>
                <br>
-               <p>Premium Settings are available with <a onclick='window.location.href = "/?to=wos/premium&direct=true&h=false"' style="text-decoration: none; cursor: pointer; color:rgb(0, 132, 255);"><b>WOS Premium</b></a>.</p>
+               <p>Premium Settings are available with <a id="wos-premium-hyper-link" onclick='window.location.href = "/?to=wos/premium&direct=true&h=false"' style="text-decoration: none; cursor: pointer;"><svg id="wos-premium-hyper-link-svg" width="12" height="12" style="margin-right: 4px;" viewBox="0 0 512 512" fill="#887D19" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="80" width="60" height="204" transform="rotate(-90 20 80)"/><rect x="432.074" y="20.0735" width="60" height="204"/><rect x="166" y="346" width="180" height="180" transform="rotate(-90 166 346)"/><rect x="492" y="432.147" width="60" height="204" transform="rotate(90 492 432.147)"/><rect x="79.9265" y="492.074" width="60" height="204" transform="rotate(-180 79.9265 492.074)"/>
+            </svg><b>WOS Premium</b></a></p>
             </div>
 
             <div class="support" style="text-align: center; padding-top: 50px;">
@@ -429,7 +508,7 @@
                       </svg></a>
                 </div>
             </div>
-
+            
             <br>
             <br>
             <br>

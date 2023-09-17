@@ -17,7 +17,7 @@
     },
     "wos/premium/features": {
         "path": "/wos/premium#features",
-        "skip_loading": false
+        "skip_loading": true
     },
     "wos/premium/get": {
         "path": "https://www.roblox.com/library/12903429193/Wolfites-Obby-System-Premium",
@@ -34,6 +34,10 @@
     "wos/faq": {
         "path": "https://wolfite.net/wos/faq",
         "skip_loading": false
+    },
+    "wos/compare": {
+        "path": "/404",
+        "skip_loading": true
     },
 
     "plugins": {

@@ -287,6 +287,23 @@
             padding-top: 50px !important;
         }
     }
+
+    #wos-premium-hyper-link {
+        color: #887D19;
+        transition: all 0.3s ease;
+    }
+
+    #wos-premium-hyper-link-svg {
+        fill: #887D19;
+        transition: all 0.3s ease;
+    }
+
+    #wos-premium-hyper-link:hover {
+        color:#605811;
+        #wos-premium-hyper-link-svg {
+            fill:#605811;
+        }
+    }
     
     br {
         user-select: none;
@@ -344,7 +361,7 @@
         <div class="content">
             <div class="loader"></div>
             <div style="text-align: left;" class="top" id="top">
-                <a href="../"><img src="https://cdn.wolfite.net/branding/wos/WOS.svg" width="60px" alt="Wolfite Logo" id="js-top-logo-img" class="wolfite-logo" style="-webkit-user-drag: none;"></a>
+                <a href="../"><img src="https://cdn.wolfite.net/branding/wos/WOS.svg" width="60px" alt="WOS Logo" id="js-top-logo-img" class="wolfite-logo" style="-webkit-user-drag: none;"></a>
                 <a onclick='window.location.href = "/?to=wos"' class="non-img">About</a>
                 <a onclick='window.location.href = "/?to=wos/0.8.5"' class="non-img">WOS 0.8.5</a>
                 <a onclick='window.location.href = "/?to=wos/features"' class="non-img">Features</a>
@@ -400,7 +417,8 @@
                         </p>
                 </div>
                <br>
-               <p>More features are available with <a onclick='window.location.href = "/?to=wos/premium&direct=true&h=false"' style="text-decoration: none; cursor: pointer; color:rgb(0, 132, 255);"><b>WOS Premium</b></a>.</p>
+               <p>More features are available with <a id="wos-premium-hyper-link" onclick='window.location.href = "/?to=wos/premium&direct=true&h=false"' style="text-decoration: none; cursor: pointer;"><svg id="wos-premium-hyper-link-svg" width="12" height="12" style="margin-right: 4px;" viewBox="0 0 512 512" fill="#887D19" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="80" width="60" height="204" transform="rotate(-90 20 80)"/><rect x="432.074" y="20.0735" width="60" height="204"/><rect x="166" y="346" width="180" height="180" transform="rotate(-90 166 346)"/><rect x="492" y="432.147" width="60" height="204" transform="rotate(90 492 432.147)"/><rect x="79.9265" y="492.074" width="60" height="204" transform="rotate(-180 79.9265 492.074)"/>
+               </svg><b>WOS Premium</b></a></p>
             </div>
 
             <div class="support" style="text-align: center; padding-top: 50px;">

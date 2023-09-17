@@ -3,25 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>System Messages | WOS DOCS</title>
+        <title>Compare | Wolfite's Obby System</title>
 
         <link rel="icon" type="image/x-icon" href="https://cdn.wolfite.net/branding/wou/WOU.png">
         <link rel="stylesheet" href="/s/css/backgrounds.css">
 
-        <meta property="og:title" content="System Messages | WOS DOCS">
+        <meta property="og:title" content="Compare Tiers | Wolfite's Obby System">
         <meta property="og:site_name" content=Wolfite>
         <meta property="og:url" content=wolfite.dev>
         <meta property="og:description" content="Wolfite's Obby System is the #1 obby system for Roblox. Many features, many games, and even more potential.">
         <meta property="og:type" content=website>
-        <meta property="og:image" content=https://wolfite.dev/wos-cover-art-v1.png>
-        <meta property="og:image:width" content="1920" />
-        <meta property="og:image:height" content="1080" />
-        <meta name="twitter:card" content="summary_large_image">
+        <meta property="og:image" content=https://cdn.wolfite.net/branding/wos/WOS.png>
+        <meta property="og:image:width" content="1024" />
+        <meta property="og:image:height" content="1022" />
+        <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@Wolfite_">
         <meta name="twitter:creator" content="@Wolfite_">
-        <meta name="twitter:title" content="System Messages | WOS DOCS">
+        <meta name="twitter:title" content="Compare Tiers | Wolfite's Obby System">
         <meta name="twitter:description" content="Wolfite's Obby System is the #1 obby system for Roblox. Many features, many games, and even more potential.">
-        <meta name="twitter:image" content="https://wolfite.dev/wos-cover-art-v1.png">
+        <meta name="twitter:image" content="https://cdn.wolfite.net/branding/wos/WOS.png">
     <!-- <meta property="og:image" content=https://cdn.wolfite.net/branding/wolfite/wolfite.png>
     <meta property="og:image:width" content="300" />
     <meta property="og:image:height" content="300" /> -->
@@ -287,23 +287,6 @@
             padding-top: 50px !important;
         }
     }
-
-    #wos-premium-hyper-link {
-        color: #887D19;
-        transition: all 0.3s ease;
-    }
-
-    #wos-premium-hyper-link-svg {
-        fill: #887D19;
-        transition: all 0.3s ease;
-    }
-
-    #wos-premium-hyper-link:hover {
-        color:#605811;
-        #wos-premium-hyper-link-svg {
-            fill:#605811;
-        }
-    }
     
     br {
         user-select: none;
@@ -359,9 +342,8 @@
         <div class="overlay"></div>
         <div class="background"></div>
         <div class="content">
-            <div class="loader"></div>
             <div style="text-align: left;" class="top" id="top">
-                <a href="../"><img src="https://cdn.wolfite.net/branding/wos/WOS.svg" width="60px" alt="WOS Logo" id="js-top-logo-img" class="wolfite-logo" style="-webkit-user-drag: none;"></a>
+                <a href="./"><img src="https://cdn.wolfite.net/branding/wos/WOS.svg" width="60px" alt="WOS Logo" id="js-top-logo-img" class="wolfite-logo" style="-webkit-user-drag: none;"></a>
                 <a onclick='window.location.href = "/?to=wos"' class="non-img">About</a>
                 <a onclick='window.location.href = "/?to=wos/0.8.5"' class="non-img">WOS 0.8.5</a>
                 <a onclick='window.location.href = "/?to=wos/features"' class="non-img">Features</a>
@@ -383,54 +365,80 @@
             </div>
 
             <div class="info" style="text-align: center; padding-top: 50px;">
-                <h1 id="main-header" style="font-size: 600%; margin: 0;"><b><img src="//cdn.wolfite.net/branding/wou/WOU.svg" style="-webkit-user-drag: none;" height="75px">&nbsp;WOS DOCS</b></h1>
-                <h3 id="main-sub-header" style="font-size: 200%; font-weight:300; letter-spacing:0.5px; color:rgb(220,220,220); margin: 0;">System Messages | Basic Features</h3>
+                <h1 id="main-header" style="font-size: 600%; margin: 0;"><b><img src="//cdn.wolfite.net/branding/wou/WOU.svg" style="-webkit-user-drag: none;" height="75px">&nbsp;WOS</b></h1>
+                <h3 id="main-sub-header" style="font-size: 200%; font-weight:300; letter-spacing:0.5px; color:rgb(220,220,220); margin: 0;">Failed to load. Please try again later.</h3>
                 <div id="buttons" style="padding-top: 10px; display: inline-block;">
-                    <button id="nav-free" onclick='history.back();' style="cursor: pointer; background-color: #FFFFFF; border: none; color: #000000; font-size: 14px; border-radius: 0.5em; padding: 10px; font-weight: bold;">Back</button>
+                    <button id="nav-free" onclick='window.location.href = "/?to=wos/free"' style="cursor: pointer; background-color: #FFFFFF; border: none; color: #000000; font-size: 14px; border-radius: 0.5em; padding: 10px; font-weight: bold;">Get it free</button>
                     &nbsp;
-                    <button id="nav-features" onclick='window.location.href = "/?to=wos/docs/menu&direct=true&h=false"' style="cursor: pointer; background-color: #29292955; border: none; color: #FFFFFF; font-size: 14px; border-radius: 0.5em; padding: 10px; font-weight: bold;">Menu</button>
+                    <button id="nav-features" onclick='window.location.href = "/?to=wos/features"' style="cursor: pointer; background-color: #29292955; border: none; color: #FFFFFF; font-size: 14px; border-radius: 0.5em; padding: 10px; font-weight: bold;">Features</button>
+                    &nbsp;
+                    <button id="nav-premium" onclick='window.location.href = "/?to=wos/premium"' style="cursor: pointer; background-color: #605811; border: none; color: #FFFFFF; font-size: 14px; border-radius: 0.5em; padding: 10px; font-weight: bold;">Premium</button>
+                </div>
+            </div>
+            <div class="stats" style="text-align: center; padding-top: 50px; height: 100px;">
+                <div style="height: 100%; width: 20%; display: inline-block;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60%" height="80%" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                      </svg>
+                      <h1 style="height: 9%;">Visits ¹</h1>
+                      <div style="height: 1%;"></div>
+                      <h2 style="height: 10%; font-weight: normal; letter-spacing: 2px;">4,000,000+</h2>
+                </div>
+
+                <div style="height: 100%; width: 20%; display: inline-block;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Robux_2019_Logo_white.svg" width="60%" height="80%">
+                      <h1 style="height: 9%;">Revenue ¹</h1>
+                      <div style="height: 1%;"></div>
+                      <h2 style="height: 10%; font-weight: normal; letter-spacing: 2px;">1,000,000+</h2>
+                </div>
+
+                <div style="height: 100%; width: 20%; display: inline-block;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60%" height="80%" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                      </svg>
+                      <h1 style="height: 9%;">Compatible</h1>
+                      <div style="height: 1%;"></div>
+                      <h2 style="height: 10%; font-weight: normal; letter-spacing: 2px;">Tons of models.</h2>
+                </div>
+                <div style="padding-top: 20px;">
+                    <a href="/wos/" onclick="alert('Disclaimer:\nThese stats are combined from multiple games, and while possible, you are not guranteed to gain this yourself.')" style="color: #FFF; text-decoration: none;">¹ Read disclaimers and sources</a>
+                </div>
+            </div>
+
+            <div class="updates" style="text-align: center; padding-top: 200px;">
+                <h1>Update Summary</h1>
+                <div style="display: inline-block; cursor: pointer;">
+                    <img onclick='window.location.href = "/?to=wos/0.8.5"' style="display: inline-block;" src="https://cdn.wolfite.net/branding/wos/tiers/Basic.png" height="140px">
+                    &nbsp;
+                    <img onclick='window.location.href = "/?to=wos/premium/0.8.5"' style="display: inline-block;" src="https://cdn.wolfite.net/branding/wos/tiers/Premium.png" height="140px">
+                </div>
+                <br>
+                (v0.8.5)
+            </div>
+
+            <div class="trusted" style="text-align: center; padding-top: 50px;">
+                <h1>Trusted by</h1>
+                <div style="display: inline-block;">
+                    <img style="display: inline-block;" src="https://framerusercontent.com/images/GBDc5pHPgURAaFAFlVhNOSeZo.png?scale-down-to=512" height="70px">
+                    &nbsp;
+                    <img style="display: inline-block;" src="https://cdn.wolfite.net/branding/wolfite/wolfite.png" height="70px">
+                </div>
+                <br>
+                Also trusted by others, they're not cool enough to be here though.
+            </div>
+
+            <div class="learn-more" style="text-align: center; padding-top: 50px;">
+                <h1>Learn More</h1>
+                <div style="display: inline-block;">
+                    <button id="nav-features" onclick='window.location.href = "/?to=wos/features"' style="cursor: pointer; background-color: #29292955; border: none; color: #FFFFFF; font-size: 14px; border-radius: 0.5em; padding: 10px; font-weight: bold;">Basic features</button>
                     &nbsp;
                     <button id="nav-premium" onclick='window.location.href = "/?to=wos/premium"' style="cursor: pointer; background-color: #605811; border: none; color: #FFFFFF; font-size: 14px; border-radius: 0.5em; padding: 10px; font-weight: bold;">Premium</button>
                 </div>
             </div>
 
-            <div class="about" style="text-align: center; padding-top: 50px;">
-                <h1>About</h1>
-                <p style="color: #b8b8b8;">All features here are supported in all versions at or above 0.8.5. All features are compadible with both Legacy Chat and Text Chat Service past 0.8.5.</p>
-                <br>
-                <br>
-                <div style="border-radius: 1em; width: 80%; background-color: #0000009E; padding:5px; padding-left: 10px; padding-right: 10px; margin: auto;" id="feature">
-                    <h1 style="text-align: left; display: flex;align-items: left; justify-content: left; padding-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" style="padding-top: 1px;" width="34px" height="34px" fill="currentColor" class="bi bi-chat-left-dots-fill" viewBox="0 0 16 16">
-                        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                      </svg>
-                    </h1>
-                        <p style="text-align: center; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">
-                            System Messages are a helpful tool for a few things. In WOS, you can have messages created when players join or complete a difficulty, and helpful tips or promotions in the chat.
-                        </p>
-                        <br>
-                        <h2 id="join-and-leave">Join And Leave</h2>
-                        <p style="text-align: center; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">
-                            This is the simplest of the 3 and is enabled by default. It sends a message to all users that is displayed in their chat that a player has joined or left the game. The message can be changed, but the default is "@{username} joined/left the game."
-                        </p>
-                        <br>
-                        <h2>Rotational Messages (Tips/Promotions)</h2>
-                        <p style="text-align: center; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">
-                            This is what most people associate with System Messages. This feature takes preset messages and sends them to all player's chats to be displayed. However, unlike a lot of games, these system messages are handled on the server, so everyone gets the messages at the same time and is not confused.
-                        </p>
-                        <br>
-                        <h2>Difficulty Completed Messages</h2>
-                        <p style="text-align: center; color: rgb(230,230,230); padding-left: 10px; padding-right: 10px;">
-                            This feature is slightly harder to explain and is more advanced. To put it simply, when a player reaches the end of a section in the obby, you can set the difficulty name and color, so for example, a chat message can appear like "@{username} completed {difficulty_name}," and it could be green, grey, blue, etc.
-                        </p>
-                </div>
-               <br>
-               <p>More features are available with <a id="wos-premium-hyper-link" onclick='window.location.href = "/?to=wos/premium&direct=true&h=false"' style="text-decoration: none; cursor: pointer;"><svg id="wos-premium-hyper-link-svg" width="12" height="12" style="margin-right: 4px;" viewBox="0 0 512 512" fill="#887D19" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="80" width="60" height="204" transform="rotate(-90 20 80)"/><rect x="432.074" y="20.0735" width="60" height="204"/><rect x="166" y="346" width="180" height="180" transform="rotate(-90 166 346)"/><rect x="492" y="432.147" width="60" height="204" transform="rotate(90 492 432.147)"/><rect x="79.9265" y="492.074" width="60" height="204" transform="rotate(-180 79.9265 492.074)"/>
-               </svg><b>WOS Premium</b></a></p>
-            </div>
-
             <div class="support" style="text-align: center; padding-top: 50px;">
                 <h1>Support</h1>
-                <p><a href="/?to=wos/faq" style="text-decoration: none; color:rgb(0, 132, 255);"><b>FAQ</b></a></p>
+                <p><a href="/404.html" style="text-decoration: none; color:rgb(0, 132, 255);"><b>FAQ</b></a></p>
                 <div style="display: inline-block;">
                     <a href="/?to=twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
                         <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
