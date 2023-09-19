@@ -53,6 +53,21 @@ const backgrounds = [
         img: 'https://cdn.wolfite.net/display/wos/WOS_BG.png',
         creator: 'Wolfite',
         link: '/'
+    },
+    {
+        img: 'https://cdn.wolfite.net/bg/v2/WDWBG_9.png',
+        creator: 'Wolfite',
+        link: '/'
+    },
+    {
+        img: 'https://cdn.wolfite.net/bg/v2/WDWBG_10.png',
+        creator: 'Wolfite',
+        link: '/'
+    },
+    {
+        img: 'https://cdn.wolfite.net/bg/v2/WDWBG_11.png',
+        creator: 'Wolfite',
+        link: '/'
     }
 ];
 
