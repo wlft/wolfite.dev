@@ -1,6 +1,6 @@
 {
     "wos": {
-        "path": "//wolfite.dev/wos",
+        "path": "/wos",
         "skip_loading": false
     },
     "wos/free": {
