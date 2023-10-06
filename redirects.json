@@ -61,6 +61,10 @@
         "path": "https://discord.com/invite/DvANH6hdCk",
         "skip_loading": false
     },
+    "patreon": {
+        "path": "https://patreon.com/wolfite",
+        "skip_loading": false
+    },
 
     "sdco": {
         "path": "https://www.roblox.com/games/10384955640/SDCO",
@@ -71,7 +75,7 @@
         "skip_loading": false
     },
     "obyan": {
-        "path": "https://www.roblox.com/games/13971383533/100m-obby-but-youre-a-noob",
+        "path": "https://www.roblox.com/games/13971383533/OByAN",
         "skip_loading": false
     }
 }
