@@ -326,6 +326,7 @@
                 setTimeout(() => {  document.getElementById("credit-link").style.bottom = "20px"; document.getElementById("credit-link").style.opacity = "100%"; }, 100);
                 setTimeout(() => {  document.getElementById("top").style.top = "0px"; document.getElementById("top").style.opacity = "100%"; }, 100);
                 setTimeout(() => {  document.getElementById("nav-free").style.opacity = "100%"; }, 1350);
+                setTimeout(() => {  document.getElementById("nav-usd").style.opacity = "100%"; }, 1350);
                 setTimeout(() => {  document.getElementById("nav-features").style.opacity = "100%"; }, 1500);
                 setTimeout(() => {  document.getElementById("nav-premium").style.opacity = "100%"; }, 1650);
 
@@ -342,7 +343,6 @@
         <div class="overlay"></div>
         <div class="background"></div>
         <div class="content">
-            <div class="loader"></div>
             <div style="text-align: left;" class="top" id="top">
                 <a href="../"><img src="https://cdn.wolfite.net/branding/wos/WOS.svg" width="60px" alt="WOS Logo" id="js-top-logo-img" class="wolfite-logo" style="-webkit-user-drag: none;"></a>
                 <a onclick='window.location.href = "/?to=wos"' class="non-img">About</a>
@@ -370,6 +370,8 @@
                 <h3 id="main-sub-header" style="font-size: 200%; font-weight:300; letter-spacing:0.5px; color:rgb(220,220,220); margin: 0;">Take WOS to a new level.</h3>
                 <div id="buttons" style="padding-top: 10px; display: inline-block;">
                     <button id="nav-free" onclick='window.location.href = "/?to=wos/premium/get"' style="cursor: pointer; background-color: #605811; border: none; color: #FFFFFF; font-size: 14px; border-radius: 0.5em; padding: 10px; font-weight: bold;">Purchase <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Robux_2019_Logo_white.svg" style="vertical-align: middle; display: inline-block;" width="20px" height="20px">&nbsp;4,000</button>
+                    &nbsp;
+                    <button id="nav-usd" onclick='window.location.href = "/?to=wos/premium/get-usd"' style="cursor: pointer; background-color: #34662b; border: none; color: #FFFFFF; font-size: 14px; border-radius: 0.5em; padding: 10px; font-weight: bold;">Purchase ~USD$14.05</button>
                     &nbsp;
                     <button id="nav-features" onclick='window.location.href = "#features"' style="cursor: pointer; background-color: #29292955; border: none; color: #FFFFFF; font-size: 14px; border-radius: 0.5em; padding: 10px; font-weight: bold;">Features</button>
                     &nbsp;

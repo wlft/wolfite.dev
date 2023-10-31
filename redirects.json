@@ -23,6 +23,10 @@
         "path": "https://www.roblox.com/library/12903429193/Wolfites-Obby-System-Premium",
         "skip_loading": false
     },
+    "wos/premium/get-usd": {
+        "path": "https://www.patreon.com/wolfite/shop/28579",
+        "skip_loading": true
+    },
     "wos/0.8.5": {
         "path": "https://dcos.fandom.com/wiki/Wolfite%27s_Obby_System/0.8.5",
         "skip_loading": false
