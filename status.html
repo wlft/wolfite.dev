@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status | Wolfite</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?">
+    <link rel="stylesheet" href="/s/css/backgrounds.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <meta property="og:title" content=Wolfite Status>
+    <meta property="og:site_name" content=Wolfite.dev>
+    <meta property="og:url" content=wolfite.dev>
+    <meta property="og:description" content="View the current status of Wolfite.">
+    <meta property="og:type" content=website>
+    <meta property="og:image" content=https://cdn.wolfite.net/branding/wolfite/wlft_dev_og_img.png>
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Wolfite_">
+    <meta name="twitter:creator" content="@Wolfite_">
+    <meta name="twitter:title" content="Wolfite">
+    <meta name="twitter:description" content="View the current status of Wolfite.">
+    <meta name="twitter:image" content="https://cdn.wolfite.net/branding/wolfite/wlft_dev_og_img.png">
+    <!-- <meta property="og:image" content=https://cdn.wolfite.net/branding/wolfite/wolfite.png>
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" /> -->
+    <meta name="theme-color" content="#020072"/>
+
+    <script src="/s/js/global.js"></script>
+
+    <style>
+.status-item {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.operational {
+    color: lightgreen;
+}
+
+.degraded-performance {
+    color: lightyellow;
+}
+
+.partial-outage {
+    color: lightred;
+}
+
+.major-outage {
+    color: red;
+}
+
+.maintenance {
+    color: blue;
+}
+
+.status-icon {
+    margin-right: 8px;
+}
+
+        
+        .social-icons {
+            position: fixed;
+            bottom: -20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+            user-select: none;
+            transition: bottom 0.4s ease, opacity 1s ease;
+            opacity: 0%;
+        }
+
+        .social-icons a {
+            display: block;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        .social-icons svg {
+            width: 100%;
+            height: 100%;
+            color: #ffffff85;
+            transition: 0.3s linear;
+        }
+
+        .social-icons img {
+            width: 100%;
+            height: 100%;
+            /* color: #ffffff85;
+            transition: 0.3s linear; */
+        }
+
+        .social-icons svg:hover {
+            color: #FFFFFF;
+        }
+
+        .credit-link {
+            position: fixed;
+            bottom: -20px;
+            /* bottom: 20px; */
+            left: 20px;
+            display: flex;
+            align-items: center;
+            color: #ffffff85;
+            text-decoration: none;
+            font-size: 14px;
+            user-select: none;
+            transition: bottom 0.4s ease, opacity 1s ease;
+            opacity: 0%;
+            /* opacity: 100%; */
+        }
+
+        .credit-link a {
+            color: white !important;
+            text-decoration: none;
+            transition: 0.3s linear;
+        }
+
+        .credit-link a:hover {
+            color: #008cff !important;
+        }
+
+        .credit-link svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+
+        .top {
+            position: relative;
+            top: -80px;
+            opacity: 0%;
+            transition: top 0.4s ease, opacity 1s ease;
+            /* transition-delay: 0.5s; */
+            /* top: 0px; */
+        }
+
+        #bottom-bar {
+            width: 100%;
+            height: 150px;
+            background-color: #000000;
+            position: fixed;
+            bottom: -100px;
+            opacity: 0%;
+            filter: blur(1em);
+            transition: 0.3s linear;
+        }
+
+        .wos, .plugins {
+            opacity: 0%;
+            transition: 0.3s linear;
+        }
+
+        .wos:hover, .plugins:hover {
+            opacity: 100% !important;
+        }
+
+        .wos svg {
+            height: 100%; width: 100%; object-fit: scale-down;
+        }
+
+        
+        @media (max-height:350px) {
+            #bottom-bar {
+                opacity: 80%;
+            }
+        }
+
+        .loader {
+            border: 1vh solid #00000000;
+            border-radius: 50%;
+            border-top: 1vh solid #FFFFFF;
+            width: 20vh;
+            height: 20vh;
+            aspect-ratio: 1 / 1;
+            object-fit: scale-down;
+            position: fixed;
+            left: calc(50% - 10vh);
+            /* right: calc(50% - 20vh); */
+            top: calc(50% - 10vh);
+            /* bottom: calc(50% - 20vh); */
+            /* left: 50%; */
+            /* top: 50%; */
+            -webkit-animation: spin 2s linear infinite; /* Safari */
+            animation: spinner-spin 1s ease-in-out infinite;
+            opacity: 0%;
+            transition: opacity 0.6s ease;
+            /* display: none; */
+}
+
+/* Safari */
+@-webkit-keyframes spinner-spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spinner-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+    </style>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function(){
+            setTimeout(() => {  document.getElementById("social-icons").style.bottom = "20px"; document.getElementById("social-icons").style.opacity = "100%"; }, 100);
+            setTimeout(() => {  document.getElementById("credit-link").style.bottom = "20px"; document.getElementById("credit-link").style.opacity = "100%"; }, 100);
+            setTimeout(() => {  document.getElementById("top").style.top = "0px"; document.getElementById("top").style.opacity = "100%"; }, 100);
+
+            // setTimeout(() => {  document.getElementById("wos").style.opacity = "60%"; }, 1000);
+            // setTimeout(() => {  document.getElementById("plugins").style.opacity = "60%"; }, 1500);
+        });
+
+        // function tween_out(){
+        //         document.getElementById("top").style.transition = "top 1s ease, opacity 0.3s ease";
+        //         document.getElementById("top").style.top = "-80px";
+        //         document.getElementById("top").style.opacity = "0%";
+        //         document.getElementById("credit-link").style.transition = "bottom 1s ease, opacity 0.3s ease";
+        //         document.getElementById("credit-link").style.bottom = "-20px";
+        //         document.getElementById("credit-link").style.opacity = "0%";
+        //         document.getElementById("social-icons").style.transition = "bottom 1s ease, opacity 0.3s ease";
+        //         document.getElementById("social-icons").style.bottom = "-20px";
+        //         document.getElementById("social-icons").style.opacity = "0%";
+
+        //         document.getElementById("plugins").style.cursor = "auto";
+        //         document.getElementById("plugins").style.setProperty("opacity", "0%", "important");
+        //         setTimeout(() => {document.getElementById("plugins").style.display = "none"},300);
+
+        //         document.getElementById("wos").style.cursor = "auto";
+        //         document.getElementById("wos").style.setProperty("opacity", "0%", "important");
+        //         setTimeout(() => {document.getElementById("wos").style.display = "none"},300);
+        //     }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    fetchStatusData();
+});
+
+function fetchStatusData() {
+    fetch('https://status.wlft.workers.dev/')
+        .then(response => response.json())
+        .then(data => updateStatusElements(data))
+        .catch(error => console.error('Error fetching data:', error));
+}
+
+function updateStatusElements(statusData) {
+    statusData.forEach(item => {
+        const elementId = item.name.replace(/ /g, '-') + '-status';
+        const statusElement = document.getElementById(elementId);
+
+        if (statusElement) {
+            statusElement.className = 'status-item ' + getStatusClass(item.status);
+            statusElement.innerHTML = item.status + ' ' + getStatusIcon(item.status);
+        }
+    });
+}
+
+function getStatusClass(status) {
+    switch (status) {
+        case 'Operational':
+            return 'operational';
+        case 'Degraded Performance':
+            return 'degraded-performance';
+        case 'Partial Outage':
+            return 'partial-outage';
+        case 'Major Outage':
+            return 'major-outage';
+        case 'Maintenance':
+            return 'maintenance';
+        default:
+            return '';
+    }
+}
+
+function getStatusIcon(status) {
+    switch (status) {
+        case 'Operational':
+            return '<i class="fa fa-check status-icon"></i>';
+        case 'Degraded Performance':
+            return '<i class="fa fa-exclamation-triangle status-icon"></i>';
+        case 'Partial Outage':
+            return '<i class="fa fa-minus status-icon"></i>';
+        case 'Major Outage':
+            return '<i class="fa fa-times status-icon"></i>';
+        case 'Maintenance':
+            return '<i class="fa fa-wrench status-icon"></i>';
+        default:
+            return '';
+    }
+}
+
+
+
+    </script>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="background"></div>
+    <div class="content">
+        <!-- <div class="loader"></div> -->
+        <div style="text-align: center;" class="top" id="top">
+            <a href="/"><img src="//wolfite.net/assets/wolfite-full.png" width="200px" alt="Wolfite Logo" id="js-top-logo-img" class="wolfite-logo" style="-webkit-user-drag: none;"></a>
+        </div>
+
+
+        <div class="Hydrogen" style="text-align: center; padding-top: 50px; margin-left: 20%; margin-right: 20%; display: flex;
+        justify-content: space-between;">
+            <h2 id="Hydrogen-prefix" style="font-size: 200%; display: inline; margin: 0; text-align: left; width: 100%; left:0px;">Hydrogen  </h2>
+            <h2 id="Hydrogen-status" style="font-size: 200%; display: inline; margin: 0; text-align: right; width: 100%; right:0px;">Loading...</h2>
+        </div>
+        <br>
+        <div class="Wolfite.dev" style="text-align: center; margin-left: 20%; margin-right: 20%; display: flex;
+        justify-content: space-between;">
+            <h2 id="Wolfite.dev-prefix" style="font-size: 200%; display: inline; margin: 0; text-align: left; width: 100%; left:0px;">Wolfite.dev     </h2>
+            <h2 id="Wolfite.dev-status" style="font-size: 200%; display: inline; margin: 0; text-align: right; width: 100%; right:0px;">Loading...</h2>
+        </div>
+        <br>
+        <div class="cdn" style="text-align: center; margin-left: 20%; margin-right: 20%; display: flex;
+        justify-content: space-between;">
+            <h2 id="CDN-prefix" style="font-size: 200%; display: inline; margin: 0; text-align: left; width: 100%; left:0px;">CDN (.wolfite.net)     </h2>
+            <h2 id="CDN-status" style="font-size: 200%; display: inline; margin: 0; text-align: right; width: 100%; right:0px;">Loading...</h2>
+        </div>
+        <br>
+        <div class="api" style="text-align: center; margin-left: 20%; margin-right: 20%; display: flex;
+        justify-content: space-between;">
+            <h2 id="API v1-prefix" style="font-size: 200%; display: inline; margin: 0; text-align: left; width: 100%; left:0px;">API v1     </h2>
+            <h2 id="API-v1-status" style="font-size: 200%; display: inline; margin: 0; text-align: right; width: 100%; right:0px;">Loading...</h2>
+        </div>
+        
+
+        <!-- <div class="wos" id="wos"  onclick="redirect('wos');" onmouseover="" style="cursor: pointer; width: 80%; height: 200px; background-color: rgba(40, 40, 40, 0.5); border-radius: 1em; margin: auto;">
+            <div style="float:left; width: 200px; height: 100%; background-color: rgba(20,20,27); border-top-left-radius: 1em; border-bottom-left-radius: 1em; margin: 0;">
+                <div style="text-align: center; margin: 0;">
+                    <img style="height: 100%; width: 100%; object-fit: scale-down;" src="//cdn.wolfite.net/branding/wos/WOS.svg" onerror="this.src='//cdn.wolfite.net/branding/wos/WOS.png'">
+
+                </div>
+            </div>
+            <div id="right" style="float:left; width: calc(100% - 200px); height: 100%; background-color: #000000; border-top-right-radius: 1em; border-bottom-right-radius: 1em;">
+                <!-- <h1 style="position:absolute; height: 100%; width: calc(100% - 20px); opacity: 90%; font-size: 16px; font-weight: 50; text-align: left; top:20px; right: -5px;"><b>Wolfite's Obby System</b></h1>
+                <img style="user-select: none; -webkit-user-drag: none; object-fit:cover; border-top-right-radius: 1em; border-bottom-right-radius: 1em; background-size:auto;" height="100%" width="100%" src="/wos-cover-art-bgonly.png">
+                <div style="float: right; bottom: 35px; right: 10px; height: 20px; width: 170px; z-index: 2; position: relative;">
+                    <h1 style="display: inline; position: relative; height: 100%; width: calc(100% - 20px); opacity: 50%; font-size: 16px; font-weight: 50; text-align: right;">3 000 000 VISITS&thinsp;+</h1>
+                    <svg style="float: right; display:inline; position:relative; opacity:50%; width:20px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/> </svg>
+                </div>
+            </div>
+        </div> -->
+<!-- 
+        <br>
+
+        <div class="plugins" id="plugins"  onclick="redirect('plugins');" onmouseover="" style="cursor: pointer; width: 80%; height: 200px; background-color: rgba(40, 40, 40, 0.5); border-radius: 1em; margin: auto;">
+            <div style="float:left; width: 200px; height: 100%; background-color: rgba(20,20,27); border-top-left-radius: 1em; border-bottom-left-radius: 1em; margin: 0;">
+                <div style="text-align: center; margin: 0;">
+                    <img style="height: 80%; width: 80%; object-fit: scale-down; padding-top: 10%; padding-bottom: 10%;" src="/ui-editor-styles-fullscale.png">
+                </div>
+            </div>
+            <div id="right" style="float:left; width: calc(100% - 200px); height: 100%; background-color: #000000; border-top-right-radius: 1em; border-bottom-right-radius: 1em;">
+                <img style="user-select: none; -webkit-user-drag: none; object-fit:cover; border-top-right-radius: 1em; border-bottom-right-radius: 1em; background-size:auto;" height="100%" width="100%" src="/plugin-cover-art-v1.4-bgonly.png">
+                <div style="float: right; bottom: 35px; right: 10px; height: 20px; width: 150px; z-index: 2; position: relative;">
+                    <h1 style="display: inline; position: relative; height: 100%; width: calc(100% - 20px); opacity: 50%; font-size: 16px; font-weight: 50; text-align: right;">20 000 USES</h1>
+                    <svg style="float: right; display:inline; position:relative; opacity:50%" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/> </svg>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+
+        <div id="bottom-bar">
+
+        </div>
+        
+        <div class="credit-link" id="credit-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
+                <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
+              </svg>
+            <span>Background by <a href="/404" id="js-bg-cl-maintext">...</a></span>
+        </div>
+        <div class="social-icons" id="social-icons">
+            <a onclick="redirect('youtube')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+              </svg></a>
+            <a onclick="redirect('twitter')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+              </svg></a>
+            <a onclick="redirect('discord')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+              </svg></a>
+            <!-- <a onclick="redirect('patreon')"><svg width="16" height="16" fill="currentColor" class="bi bi-patreon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
+                <path class="st0" d="M1033.05,324.45c-0.19-137.9-107.59-250.92-233.6-291.7c-156.48-50.64-362.86-43.3-512.28,27.2 C106.07,145.41,49.18,332.61,47.06,519.31c-1.74,153.5,13.58,557.79,241.62,560.67c169.44,2.15,194.67-216.18,273.07-321.33 c55.78-74.81,127.6-95.94,216.01-117.82C929.71,603.22,1033.27,483.3,1033.05,324.45z"/>
+           </svg></a> -->
+           <!-- <a onclick="redirect('patreon')"><img src="/s/temp/Patreon_Logo_webAnim_v007_512.gif"  width="16"/></a> -->
+        </div>
+    </div>
+    
+    <script src="/s/js/backgrounds.js"></script>
+</body>
+</html>
