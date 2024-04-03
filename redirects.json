@@ -31,6 +31,10 @@
         "path": "https://dcos.fandom.com/wiki/Wolfite%27s_Obby_System/0.8.5",
         "skip_loading": false
     },
+    "wos/0.8.6": {
+        "path": "https://dcos.fandom.com/wiki/Wolfite%27s_Obby_System/0.8.6",
+        "skip_loading": false
+    },
     "wos/docs/menu": {
         "path": "/wos/docs/menu",
         "skip_loading": false
