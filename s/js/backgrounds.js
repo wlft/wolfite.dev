@@ -10,62 +10,62 @@ const backgrounds = [
     // '/WDW_BG_t6.png',
     // '/WDW_BG_t7.png'
     {
-        img: 'https://cdn.wolfite.net/bg/v2/WDWBG_1.png',
+        img: 'https://wwstatic.com/ss1/backgrounds/wlftgbg/v1/collections/default-1/SDCORemorseless1.png',
         creator: 'Moho',
         link: 'https://www.roblox.com/users/3532314235/profile'
     },
     {
-        img: 'https://cdn.wolfite.net/bg/v2/WDWBG_2.png',
+        img: 'https://wwstatic.com/ss1/backgrounds/wlftgbg/v1/collections/default-1/SDCOTerrifyingInsane1.png',
         creator: 'Moho',
         link: 'https://www.roblox.com/users/3532314235/profile'
     },
     {
-        img: 'https://cdn.wolfite.net/bg/v2/WDWBG_3.png',
+        img: 'https://wwstatic.com/ss1/backgrounds/wlftgbg/v1/collections/default-1/SDCOMonthlyObby1.png',
         creator: 'Moho',
         link: 'https://www.roblox.com/users/3532314235/profile'
     },
     {
-        img: 'https://cdn.wolfite.net/bg/v2/WDWBG_4.png',
+        img: 'https://wwstatic.com/ss1/backgrounds/wlftgbg/v1/collections/default-1/SDCOMedium.png',
         creator: 'Moho',
         link: 'https://www.roblox.com/users/3532314235/profile'
     },
     {
-        img: 'https://cdn.wolfite.net/bg/v2/WDWBG_5.png',
+        img: 'https://wwstatic.com/ss1/backgrounds/wlftgbg/v1/collections/default-1/SDCOImpossibleTower1.png',
         creator: 'or_ob',
         link: 'https://www.roblox.com/users/328437756/profile'
     },
     {
-        img: 'https://cdn.wolfite.net/bg/v2/WDWBG_6.png',
+        img: 'https://wwstatic.com/ss1/backgrounds/wlftgbg/v1/collections/default-1/SDCODifficult1.png',
         creator: 'Moho',
         link: 'https://www.roblox.com/users/3532314235/profile'
     },
     {
-        img: 'https://cdn.wolfite.net/bg/v2/WDWBG_7.png',
+        img: 'https://wwstatic.com/ss1/backgrounds/wlftgbg/v1/collections/default-1/SDCODifficult2.png',
         creator: 'Moho',
         link: 'https://www.roblox.com/users/3532314235/profile'
     },
     {
-        img: 'https://cdn.wolfite.net/bg/v2/WDWBG_8.png',
+        img: 'https://wwstatic.com/ss1/backgrounds/wlftgbg/v1/collections/default-1/XDCOV2MediumEasyVeryEasyEffortless1.png',
+        creator: 'Wolfite',
+        link: '/'
+    },
+    // {
+    //     img: 'https://cdn.wolfite.net/display/wos/WOS_BG.png',
+    //     creator: 'Wolfite',
+    //     link: '/'
+    // },
+    {
+        img: 'https://wwstatic.com/ss1/backgrounds/wlftgbg/v1/collections/default-1/XDCOV3Medium1.png',
         creator: 'Wolfite',
         link: '/'
     },
     {
-        img: 'https://cdn.wolfite.net/display/wos/WOS_BG.png',
+        img: 'https://wwstatic.com/ss1/backgrounds/wlftgbg/v1/collections/default-1/XDCOV3VeryEasy.png',
         creator: 'Wolfite',
         link: '/'
     },
     {
-        img: 'https://cdn.wolfite.net/bg/v2/WDWBG_9.png',
-        creator: 'Wolfite',
-        link: '/'
-    },
-    {
-        img: 'https://cdn.wolfite.net/bg/v2/WDWBG_10.png',
-        creator: 'Wolfite',
-        link: '/'
-    },
-    {
-        img: 'https://cdn.wolfite.net/bg/v2/WDWBG_11.png',
+        img: 'https://wwstatic.com/ss1/backgrounds/wlftgbg/v1/collections/default-1/XDCOV3Medium2.png',
         creator: 'Wolfite',
         link: '/'
     }
