@@ -1,6 +1,6 @@
 {
     "wos": {
-        "path": "/wos",
+        "path": "/wos/",
         "skip_loading": false
     },
     "wos/free": {
@@ -12,11 +12,11 @@
         "skip_loading": false
     },
     "wos/premium": {
-        "path": "/wos/premium",
+        "path": "/wos/premium/",
         "skip_loading": false
     },
     "wos/premium/features": {
-        "path": "/wos/premium#features",
+        "path": "/wos/premium/#features",
         "skip_loading": true
     },
     "wos/premium/get": {
