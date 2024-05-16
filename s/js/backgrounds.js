@@ -25,7 +25,7 @@ const backgrounds = [
         link: 'https://www.roblox.com/users/3532314235/profile'
     },
     {
-        img: 'https://wwstatic.com/ss1/backgrounds/wlftgbg/v1/collections/default-1/SDCOMedium.png',
+        img: 'https://wwstatic.com/ss1/backgrounds/wlftgbg/v1/collections/default-1/SDCOMedium1.png',
         creator: 'Moho',
         link: 'https://www.roblox.com/users/3532314235/profile'
     },
@@ -66,6 +66,31 @@ const backgrounds = [
     },
     {
         img: 'https://wwstatic.com/ss1/backgrounds/wlftgbg/v1/collections/default-1/XDCOV3Medium2.png',
+        creator: 'Wolfite',
+        link: '/'
+    },
+    {
+        img: 'https://wwstatic.com/ss1/backgrounds/wlftgbg/v1/collections/default-1/VDCOV1Effortless1.png',
+        creator: 'Wolfite',
+        link: '/'
+    },
+    {
+        img: 'https://wwstatic.com/ss1/backgrounds/wlftgbg/v1/collections/default-1/VDCOV1Effortless2.png',
+        creator: 'Wolfite',
+        link: '/'
+    },
+    {
+        img: 'https://wwstatic.com/ss1/backgrounds/wlftgbg/v1/collections/default-1/VDCOV1VeryEasy1.png',
+        creator: 'Wolfite',
+        link: '/'
+    },
+    {
+        img: 'https://wwstatic.com/ss1/backgrounds/wlftgbg/v1/collections/default-1/VDCOV1VeryEasy2.png',
+        creator: 'Wolfite',
+        link: '/'
+    },
+    {
+        img: 'https://wwstatic.com/ss1/backgrounds/wlftgbg/v1/collections/default-1/VDCOV1VeryEasy3.png',
         creator: 'Wolfite',
         link: '/'
     }
