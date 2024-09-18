@@ -195,6 +195,11 @@
                 "text": "Where do would you go next?",
                 "author": "Wolfite",
                 "link": "/"
+            },
+            {
+                "text": "You seem lost? Maybe try clearing your head.",
+                "author": "Wolfite",
+                "link": "/"
             }
         ]
     }
