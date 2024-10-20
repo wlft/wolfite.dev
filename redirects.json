@@ -57,6 +57,14 @@
         "path": "https://twitter.com/Wolfite_",
         "skip_loading": false
     },
+    "bsky": {
+        "path": "https://bsky.app/profile/wlft.bsky.social",
+        "skip_loading": false
+    },
+    "bluesky": {
+        "path": "https://bsky.app/profile/wlft.bsky.social",
+        "skip_loading": false
+    },
     "X": {
         "path": "https://twitter.com/Wolfite_?utm_source=U%2B1F913",
         "skip_loading": false
